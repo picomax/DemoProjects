@@ -23,20 +23,27 @@ enum MediaType {
         case .ebook: return "eBook"
         }
     }
+    
+    //MARK:- segments
+    static var segments: [MediaType] { return [.movie, .tv, .music, .ebook] }
+    
+    init(rawValue: Int) {
+        if rawValue < MediaType.segments.count {
+            self = MediaType.segments[rawValue]
+        } else {
+            self = .movie
+        }
+    }
 }
 
 class RootViewController: UIViewController {
-    
     @IBOutlet fileprivate weak var tableView: UITableView!
     @IBOutlet fileprivate weak var searchBar: UISearchBar!
-    let segmentControl = UISegmentedControl(items: [MediaType.movie.title(),
-                                                    MediaType.tv.title(),
-                                                    MediaType.music.title(),
-                                                    MediaType.ebook.title()])
-    
+    let segmentControl = UISegmentedControl(items: MediaType.segments.map({ return $0.title() }))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationItem.titleView = segmentControl
         segmentControl.selectedSegmentIndex = 0
         segmentControl.addTarget(self,
@@ -49,10 +56,12 @@ class RootViewController: UIViewController {
     }
 
     func didSelectSegment() {
-        dLog()
+        let selected = MediaType(rawValue: segmentControl.selectedSegmentIndex)
+        dLog(selected.title())
     }
 }
 
+//MARK:- UITableViewDelegate, UITableViewDataSource
 extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dLog()
@@ -65,5 +74,52 @@ extension RootViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
+}
+
+//MARK:- UISearchBarDelegate
+extension RootViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        // return NO to not become first responder
+        return true
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        // called when text starts editing
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        // return NO to not resign first responder
+        return true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        // called when text ends editing
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        // called when text changes (including clear)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        // called before text changes
+        return true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        // called when keyboard search button pressed
+    }
+    
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        // called when bookmark button pressed
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        // called when cancel button pressed
+    }
+    
+    func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
+        // called when search results button pressed
+    }
+
 }
 
