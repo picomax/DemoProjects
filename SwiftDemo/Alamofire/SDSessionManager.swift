@@ -13,6 +13,7 @@ class SDSessionManager: Alamofire.SessionManager {
     static let shared: SDSessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+        configuration.requestCachePolicy = .useProtocolCachePolicy
         let manager = SDSessionManager(configuration: configuration)
         manager.configureURLCache()
         return manager
