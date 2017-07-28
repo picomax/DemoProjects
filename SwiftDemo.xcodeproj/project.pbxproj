@@ -10,14 +10,17 @@
 		073874C4C897DBA9222AEC27 /* Pods_SwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F3459CB6E5B0A468B75445 /* Pods_SwiftDemoTests.framework */; };
 		4DD89FF8E53FE1937AEB7252 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CCE07BC6F89C7805666021 /* Pods_SwiftDemo.framework */; };
 		63091C1FA0C17E2EF3DCBE3B /* Pods_SwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF36E2E465DE8C6B134F66C /* Pods_SwiftDemoUITests.framework */; };
+		77236E881F2BA065000F2604 /* SDSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77236E871F2BA065000F2604 /* SDSessionManager.swift */; };
+		77236E8C1F2BA903000F2604 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77236E8B1F2BA903000F2604 /* Music.swift */; };
 		779570EF1F2713E800A0AC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779570EE1F2713E800A0AC23 /* AppDelegate.swift */; };
-		779570F11F2713E800A0AC23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779570F01F2713E800A0AC23 /* ViewController.swift */; };
 		779570F41F2713E800A0AC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779570F21F2713E800A0AC23 /* Main.storyboard */; };
 		779570F71F2713E800A0AC23 /* SwiftDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */; };
 		779570F91F2713E800A0AC23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 779570F81F2713E800A0AC23 /* Assets.xcassets */; };
 		779570FC1F2713E800A0AC23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779570FA1F2713E800A0AC23 /* LaunchScreen.storyboard */; };
 		779571071F2713E800A0AC23 /* SwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779571061F2713E800A0AC23 /* SwiftDemoTests.swift */; };
 		779571121F2713E800A0AC23 /* SwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779571111F2713E800A0AC23 /* SwiftDemoUITests.swift */; };
+		779571231F27886900A0AC23 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779571221F27886900A0AC23 /* RootViewController.swift */; };
+		779571261F278AC200A0AC23 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779571251F278AC200A0AC23 /* Define.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +47,10 @@
 		52D5F6C7E28D339891925531 /* Pods-SwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemoTests/Pods-SwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61F3459CB6E5B0A468B75445 /* Pods_SwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71195B7F98355A16B4FA374C /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		77236E871F2BA065000F2604 /* SDSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSessionManager.swift; sourceTree = "<group>"; };
+		77236E8B1F2BA903000F2604 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		779570EB1F2713E800A0AC23 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779570EE1F2713E800A0AC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		779570F01F2713E800A0AC23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		779570F31F2713E800A0AC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		779570F61F2713E800A0AC23 /* SwiftDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftDemo.xcdatamodel; sourceTree = "<group>"; };
 		779570F81F2713E800A0AC23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		7795710D1F2713E800A0AC23 /* SwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		779571111F2713E800A0AC23 /* SwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemoUITests.swift; sourceTree = "<group>"; };
 		779571131F2713E800A0AC23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		779571221F27886900A0AC23 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		779571251F278AC200A0AC23 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		899499217A477B57AED4589C /* Pods-SwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemoTests/Pods-SwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE918B2B0AAEBE5BFFEB7E66 /* Pods-SwiftDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemoUITests/Pods-SwiftDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E87639603FFBAE48DA4E65DB /* Pods-SwiftDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemoUITests/Pods-SwiftDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +97,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77236E851F2BA037000F2604 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				77236E871F2BA065000F2604 /* SDSessionManager.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		77236E861F2BA03C000F2604 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				779570FD1F2713E800A0AC23 /* Info.plist */,
+				779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */,
+				779570F81F2713E800A0AC23 /* Assets.xcassets */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		77236E891F2BA773000F2604 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		77236E8A1F2BA8E6000F2604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77236E8B1F2BA903000F2604 /* Music.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		779570E21F2713E800A0AC23 = {
 			isa = PBXGroup;
 			children = (
@@ -117,12 +156,13 @@
 			isa = PBXGroup;
 			children = (
 				779570EE1F2713E800A0AC23 /* AppDelegate.swift */,
-				779570F01F2713E800A0AC23 /* ViewController.swift */,
-				779570F21F2713E800A0AC23 /* Main.storyboard */,
-				779570F81F2713E800A0AC23 /* Assets.xcassets */,
-				779570FA1F2713E800A0AC23 /* LaunchScreen.storyboard */,
-				779570FD1F2713E800A0AC23 /* Info.plist */,
-				779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */,
+				77236E851F2BA037000F2604 /* Alamofire */,
+				779571241F278AB600A0AC23 /* Define */,
+				77236E891F2BA773000F2604 /* Extension */,
+				77236E8A1F2BA8E6000F2604 /* Model */,
+				77236E861F2BA03C000F2604 /* Resource */,
+				7795711F1F27885700A0AC23 /* Storyboard */,
+				779571201F27886900A0AC23 /* UIViewController */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -143,6 +183,39 @@
 				779571131F2713E800A0AC23 /* Info.plist */,
 			);
 			path = SwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		7795711F1F27885700A0AC23 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				779570F21F2713E800A0AC23 /* Main.storyboard */,
+				779570FA1F2713E800A0AC23 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		779571201F27886900A0AC23 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				779571211F27886900A0AC23 /* Root */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		779571211F27886900A0AC23 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				779571221F27886900A0AC23 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		779571241F278AB600A0AC23 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				779571251F278AC200A0AC23 /* Define.swift */,
+			);
+			path = Define;
 			sourceTree = "<group>";
 		};
 		A9C820A32A566A2EF6C4EB89 /* Pods */ = {
@@ -451,9 +524,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				779570F11F2713E800A0AC23 /* ViewController.swift in Sources */,
+				779571231F27886900A0AC23 /* RootViewController.swift in Sources */,
 				779570F71F2713E800A0AC23 /* SwiftDemo.xcdatamodeld in Sources */,
+				779571261F278AC200A0AC23 /* Define.swift in Sources */,
 				779570EF1F2713E800A0AC23 /* AppDelegate.swift in Sources */,
+				77236E881F2BA065000F2604 /* SDSessionManager.swift in Sources */,
+				77236E8C1F2BA903000F2604 /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

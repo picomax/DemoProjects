@@ -1,14 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oRl-sk-NY5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="3hO-ti-UGq">
+            <objects>
+                <navigationController id="oRl-sk-NY5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8wL-Qk-jwI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5LB-sA-Jhl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w06-Rd-oWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="35"/>
+        </scene>
+        <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +36,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="SVw-8U-mV0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jtz-Ru-8l4">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d9f-Xd-62Y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7PK-O9-PQT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jtz-Ru-8l4" firstAttribute="top" secondItem="SVw-8U-mV0" secondAttribute="bottom" id="LeG-XH-73q"/>
+                            <constraint firstItem="SVw-8U-mV0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QNa-vh-uAj"/>
+                            <constraint firstAttribute="trailing" secondItem="jtz-Ru-8l4" secondAttribute="trailing" id="bEu-ya-W0s"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jtz-Ru-8l4" secondAttribute="bottom" id="nTS-sI-1fo"/>
+                            <constraint firstItem="SVw-8U-mV0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pDm-xD-UMj"/>
+                            <constraint firstAttribute="trailing" secondItem="SVw-8U-mV0" secondAttribute="trailing" id="wIt-Mo-ZwD"/>
+                            <constraint firstItem="jtz-Ru-8l4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xew-OZ-xUE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="28Y-qS-oBL"/>
+                    <connections>
+                        <outlet property="searchBar" destination="SVw-8U-mV0" id="hIB-TE-hAq"/>
+                        <outlet property="tableView" destination="jtz-Ru-8l4" id="OER-zI-zks"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="77.599999999999994" y="34.632683658170919"/>
         </scene>
     </scenes>
 </document>
