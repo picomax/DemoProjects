@@ -7,8 +7,8 @@ target 'SwiftDemo' do
   
   pod 'Alamofire', '~> 4.4'
   pod 'SnapKit', '~> 3.2.0'
-  pod 'Kingfisher', '~> 3.0'
-  pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 3.10.4'
+  pod 'SwiftyJSON', '~> 3.1.4'
 
   # Pods for SwiftDemo
 

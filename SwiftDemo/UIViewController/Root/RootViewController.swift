@@ -50,6 +50,11 @@ class RootViewController: UIViewController {
                                  action: #selector(didSelectSegment),
                                  for: .valueChanged)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
 
     func didSelectSegment() {
         let selected = MediaType(rawValue: segmentControl.selectedSegmentIndex)
