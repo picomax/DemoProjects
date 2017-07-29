@@ -11,6 +11,18 @@ import SwiftyJSON
 import Alamofire
 
 struct Music {
+    let id: String
+    let name: String
+    let singer: String
+    
+    init(json: JSON) {
+        id = json["id"].stringValue
+        name = json["name"].stringValue
+        singer = json["singer"].stringValue
+    }
+}
+
+extension Music {
     @discardableResult
     static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
         let router = SDRouter.music(term: term)
@@ -21,8 +33,8 @@ struct Music {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                // parse json and create [Music]
-                callback(nil, [Music()])
+                let m = Music(json: json)
+                callback(nil, [m])
             }
         })
     }

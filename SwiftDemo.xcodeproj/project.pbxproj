@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041A27101F2C34F500EF4C85 /* SearchiTunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */; };
+		041A27141F2C3AFE00EF4C85 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27131F2C3AFE00EF4C85 /* MusicModel.swift */; };
+		041A27161F2C3B0C00EF4C85 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27151F2C3B0C00EF4C85 /* MovieModel.swift */; };
+		041A27181F2C3B1800EF4C85 /* TVShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27171F2C3B1800EF4C85 /* TVShowModel.swift */; };
+		041A271A1F2C3B2400EF4C85 /* eBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27191F2C3B2400EF4C85 /* eBookModel.swift */; };
 		073874C4C897DBA9222AEC27 /* Pods_SwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F3459CB6E5B0A468B75445 /* Pods_SwiftDemoTests.framework */; };
 		4DD89FF8E53FE1937AEB7252 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CCE07BC6F89C7805666021 /* Pods_SwiftDemo.framework */; };
 		63091C1FA0C17E2EF3DCBE3B /* Pods_SwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF36E2E465DE8C6B134F66C /* Pods_SwiftDemoUITests.framework */; };
@@ -41,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchiTunesModel.swift; sourceTree = "<group>"; };
+		041A27131F2C3AFE00EF4C85 /* MusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		041A27151F2C3B0C00EF4C85 /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		041A27171F2C3B1800EF4C85 /* TVShowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowModel.swift; sourceTree = "<group>"; };
+		041A27191F2C3B2400EF4C85 /* eBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eBookModel.swift; sourceTree = "<group>"; };
 		0EF36E2E465DE8C6B134F66C /* Pods_SwiftDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A48C779D9DAC4CA7463C11 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		26CCE07BC6F89C7805666021 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,7 +135,12 @@
 		77236E8A1F2BA8E6000F2604 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */,
 				77236E8B1F2BA903000F2604 /* Music.swift */,
+				041A27131F2C3AFE00EF4C85 /* MusicModel.swift */,
+				041A27151F2C3B0C00EF4C85 /* MovieModel.swift */,
+				041A27171F2C3B1800EF4C85 /* TVShowModel.swift */,
+				041A27191F2C3B2400EF4C85 /* eBookModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -525,7 +540,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				779571231F27886900A0AC23 /* RootViewController.swift in Sources */,
+				041A27101F2C34F500EF4C85 /* SearchiTunesModel.swift in Sources */,
+				041A27161F2C3B0C00EF4C85 /* MovieModel.swift in Sources */,
+				041A27141F2C3AFE00EF4C85 /* MusicModel.swift in Sources */,
+				041A27181F2C3B1800EF4C85 /* TVShowModel.swift in Sources */,
 				779570F71F2713E800A0AC23 /* SwiftDemo.xcdatamodeld in Sources */,
+				041A271A1F2C3B2400EF4C85 /* eBookModel.swift in Sources */,
 				779571261F278AC200A0AC23 /* Define.swift in Sources */,
 				779570EF1F2713E800A0AC23 /* AppDelegate.swift in Sources */,
 				77236E881F2BA065000F2604 /* SDSessionManager.swift in Sources */,
