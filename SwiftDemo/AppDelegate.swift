@@ -19,18 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        SDSessionManager.shared.requestSearch(router: .movie(term: "Matrix")) { (response) in
-            switch response.result {
-            case .failure(let error):
-                dLog(error)
-                
-            case .success(let value):
-                let json = JSON(value)
-                dLog(json)
-            }
-        }
-        
         return true
     }
 
