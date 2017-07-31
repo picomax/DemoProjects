@@ -7,9 +7,12 @@
 //
 
 import XCTest
+import OHHTTPStubs
+
 @testable import SwiftDemo
 
 class SwiftDemoTests: XCTestCase {
+    let timeout: TimeInterval = 15
     
     override func setUp() {
         super.setUp()
@@ -21,15 +24,24 @@ class SwiftDemoTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testMusic() {
+        stub(condition: { (req) -> Bool in
+            return true
+        }) { (req) -> OHHTTPStubsResponse in
+            let path = Bundle.main.path(forResource: "music-200", ofType: "json")!
+            return fixture(filePath: path, status: 200, headers: [:])
+        }
+        
+        let arrived = self.expectation(description: #function)
+        
+        MusicModel.requestMusic(term: "someone") { (error, musics) in
+            //do test
+            
+            arrived.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: timeout) { error in
+            XCTAssertNil(error, "timeout")
         }
     }
     

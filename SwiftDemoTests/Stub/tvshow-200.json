@@ -1,0 +1,27 @@
+{
+    "resultCount": 1,
+    "results": [{
+                "wrapperType": "collection",
+                "collectionType": "TV Season",
+                "artistId": 474228212,
+                "collectionId": 474228215,
+                "artistName": "Band of Brothers",
+                "collectionName": "Band of Brothers",
+                "collectionCensoredName": "Band of Brothers",
+                "artistViewUrl": "https://itunes.apple.com/us/tv-show/band-of-brothers/id474228212?uo=4",
+                "collectionViewUrl": "https://itunes.apple.com/us/tv-season/band-of-brothers/id474228215?uo=4",
+                "artworkUrl60": "http://is5.mzstatic.com/image/thumb/Music3/v4/46/74/ab/4674ab7d-e908-cc89-0602-03a54d101a6f/source/60x60bb.jpg",
+                "artworkUrl100": "http://is5.mzstatic.com/image/thumb/Music3/v4/46/74/ab/4674ab7d-e908-cc89-0602-03a54d101a6f/source/100x100bb.jpg",
+                "collectionPrice": 34.99,
+                "collectionHdPrice": 39.99,
+                "collectionExplicitness": "notExplicit",
+                "contentAdvisoryRating": "TV-MA",
+                "trackCount": 11,
+                "copyright": "© 2001 Home Box Office, Inc.",
+                "country": "USA",
+                "currency": "USD",
+                "releaseDate": "2001-09-09T07:00:00Z",
+                "primaryGenreName": "Drama",
+                "longDescription": "They were ordinary men, swept up in the most extraordinary conflict in history. But with the eyes of the world upon them, they found their greatest source of strength in each other. Tom Hanks, Steven Spielberg and HBO present the story of Easy Company, an elite team of U.S. paratroopers whose World War II exploits are as incredible as they are true. This landmark ten-part miniseries based on Stephen E. Ambrose's non-fiction best-seller recounts the remarkable achievements of a volunteer rifle company that parachuted into France on D-Day, spearheaded the Market-Garden and Rhine offensives, fought the Nazis in Bastogne and the Bulge and captured Hitler's 'impenetrable' Eagle's Nest at Berchtesgaden in 1945."
+                }]
+}
