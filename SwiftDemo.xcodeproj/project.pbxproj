@@ -17,6 +17,10 @@
 		63091C1FA0C17E2EF3DCBE3B /* Pods_SwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF36E2E465DE8C6B134F66C /* Pods_SwiftDemoUITests.framework */; };
 		77236E881F2BA065000F2604 /* SDSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77236E871F2BA065000F2604 /* SDSessionManager.swift */; };
 		77236E8C1F2BA903000F2604 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77236E8B1F2BA903000F2604 /* Music.swift */; };
+		77236E921F2FB7F3000F2604 /* movie-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E911F2FB7F3000F2604 /* movie-200.json */; };
+		77236E941F2FB858000F2604 /* music-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E931F2FB858000F2604 /* music-200.json */; };
+		77236E961F2FB8E1000F2604 /* ebook-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E951F2FB8E1000F2604 /* ebook-200.json */; };
+		77236E981F2FB992000F2604 /* tvshow-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E971F2FB992000F2604 /* tvshow-200.json */; };
 		779570EF1F2713E800A0AC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779570EE1F2713E800A0AC23 /* AppDelegate.swift */; };
 		779570F41F2713E800A0AC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779570F21F2713E800A0AC23 /* Main.storyboard */; };
 		779570F71F2713E800A0AC23 /* SwiftDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */; };
@@ -59,6 +63,10 @@
 		71195B7F98355A16B4FA374C /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		77236E871F2BA065000F2604 /* SDSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDSessionManager.swift; sourceTree = "<group>"; };
 		77236E8B1F2BA903000F2604 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		77236E911F2FB7F3000F2604 /* movie-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "movie-200.json"; sourceTree = "<group>"; };
+		77236E931F2FB858000F2604 /* music-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "music-200.json"; sourceTree = "<group>"; };
+		77236E951F2FB8E1000F2604 /* ebook-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ebook-200.json"; sourceTree = "<group>"; };
+		77236E971F2FB992000F2604 /* tvshow-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tvshow-200.json"; sourceTree = "<group>"; };
 		779570EB1F2713E800A0AC23 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779570EE1F2713E800A0AC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		779570F31F2713E800A0AC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 		77236E901F2FB145000F2604 /* Stub */ = {
 			isa = PBXGroup;
 			children = (
+				77236E911F2FB7F3000F2604 /* movie-200.json */,
+				77236E931F2FB858000F2604 /* music-200.json */,
+				77236E951F2FB8E1000F2604 /* ebook-200.json */,
+				77236E971F2FB992000F2604 /* tvshow-200.json */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -392,6 +404,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77236E941F2FB858000F2604 /* music-200.json in Resources */,
+				77236E981F2FB992000F2604 /* tvshow-200.json in Resources */,
+				77236E961F2FB8E1000F2604 /* ebook-200.json in Resources */,
+				77236E921F2FB7F3000F2604 /* movie-200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
