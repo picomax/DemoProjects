@@ -145,6 +145,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		77236E901F2FB145000F2604 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		779570E21F2713E800A0AC23 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +192,7 @@
 		779571051F2713E800A0AC23 /* SwiftDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				77236E901F2FB145000F2604 /* Stub */,
 				779571061F2713E800A0AC23 /* SwiftDemoTests.swift */,
 				779571081F2713E800A0AC23 /* Info.plist */,
 			);
