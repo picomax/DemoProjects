@@ -36,35 +36,36 @@ enum SDRouter: URLConvertible {
     
     func asURL() throws -> URL {
         var urlComponent = URLComponents()
-        urlComponent.host = "https://itunes.apple.com/"
-        urlComponent.path = "search"
+        urlComponent.scheme = "https"
+        urlComponent.host = "itunes.apple.com"
+        urlComponent.path = "/search"
         
-        var queryItems: [URLQueryItem] = []
         switch self {
         case .movie(let term):
-            queryItems.append(URLQueryItem(name: "media", value: "movie"))
-            queryItems.append(URLQueryItem(name: "entity", value: "movie"))
-            queryItems.append(URLQueryItem(name: "term", value: term))
+            urlComponent.queryItems = [URLQueryItem(name: "media", value: "movie"),
+                                       URLQueryItem(name: "entity", value: "movie"),
+                                       URLQueryItem(name: "term", value: term)]
         case .tvshow(let term):
-            queryItems.append(URLQueryItem(name: "media", value: "tvShow"))
-            queryItems.append(URLQueryItem(name: "entity", value: "tvSeason"))
-            queryItems.append(URLQueryItem(name: "term", value: term))
+            urlComponent.queryItems = [URLQueryItem(name: "media", value: "tvShow"),
+                                       URLQueryItem(name: "entity", value: "tvSeason"),
+                                       URLQueryItem(name: "term", value: term)]
         case .music(let term):
-            queryItems.append(URLQueryItem(name: "media", value: "music"))
-            queryItems.append(URLQueryItem(name: "entity", value: "musicTrack"))
-            queryItems.append(URLQueryItem(name: "term", value: term))
+            urlComponent.queryItems = [URLQueryItem(name: "media", value: "music"),
+                                       URLQueryItem(name: "entity", value: "musicTrack"),
+                                       URLQueryItem(name: "term", value: term)]
         case .ebook(let term):
-            queryItems.append(URLQueryItem(name: "media", value: "ebook"))
-            queryItems.append(URLQueryItem(name: "entity", value: "ebook"))
-            queryItems.append(URLQueryItem(name: "term", value: term))
+            urlComponent.queryItems = [URLQueryItem(name: "media", value: "ebook"),
+                                       URLQueryItem(name: "entity", value: "ebook"),
+                                       URLQueryItem(name: "term", value: term)]
         }
         return urlComponent.url!
     }
 }
 
 extension SDSessionManager {
+    @discardableResult
     func requestSearch(router: SDRouter, callback: @escaping (DataResponse<Any>) -> Void) -> URLSessionTask? {
-        let request = SDSessionManager.shared.request(router)
+        let request = SDSessionManager.shared.request(router).responseJSON(completionHandler: callback)
         return request.task
     }
 }
