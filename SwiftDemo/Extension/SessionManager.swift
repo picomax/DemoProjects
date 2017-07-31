@@ -9,12 +9,12 @@
 import Alamofire
 import Foundation
 
-class SDSessionManager: Alamofire.SessionManager {
-    static let shared: SDSessionManager = {
+extension SessionManager {
+    static let shared: SessionManager = {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         configuration.requestCachePolicy = .useProtocolCachePolicy
-        let manager = SDSessionManager(configuration: configuration)
+        let manager = SessionManager(configuration: configuration)
         manager.configureURLCache()
         return manager
     }()
@@ -62,10 +62,10 @@ enum SDRouter: URLConvertible {
     }
 }
 
-extension SDSessionManager {
+extension SessionManager {
     @discardableResult
     func requestSearch(router: SDRouter, callback: @escaping (DataResponse<Any>) -> Void) -> URLSessionTask? {
-        let request = SDSessionManager.shared.request(router).responseJSON(completionHandler: callback)
+        let request = SessionManager.shared.request(router).responseJSON(completionHandler: callback)
         return request.task
     }
 }
