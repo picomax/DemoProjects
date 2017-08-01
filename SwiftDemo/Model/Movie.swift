@@ -13,7 +13,6 @@ import Alamofire
 struct Movie {
     let wrapperType: String
     let kind: String
-    let artistId: String
     let collectionId: String
     let trackId: String
     let artistName: String
@@ -21,14 +20,21 @@ struct Movie {
     let trackName: String
     let collectionCensoredName: String
     let trackCensoredName: String
-    let artistViewUrl: String
+    let collectionArtistId: String
+    let collectionArtistViewUrl: String
     let collectionViewUrl: String
     let trackViewUrl: String
     let previewUrl: String
+    let artworkUrl30: String
     let artworkUrl60: String
     let artworkUrl100: String
     let collectionPrice: String
     let trackPrice: String
+    let trackRentalPrice: String
+    let collectionHdPrice: String
+    let trackHdPrice: String
+    let trackHdRentalPrice: String
+    let releaseDate: String
     let collectionExplicitness: String
     let trackExplicitness: String
     let discCount: String
@@ -39,11 +45,12 @@ struct Movie {
     let country: String
     let currency: String
     let primaryGenreName: String
+    let contentAdvisoryRating: String
+    let hasITunesExtras: String
     
     init(json: JSON) {
         wrapperType = json["wrapperType"].stringValue
         kind = json["kind"].stringValue
-        artistId = json["artistId"].stringValue
         collectionId = json["collectionId"].stringValue
         trackId = json["trackId"].stringValue
         artistName = json["artistName"].stringValue
@@ -51,14 +58,21 @@ struct Movie {
         trackName = json["trackName"].stringValue
         collectionCensoredName = json["collectionCensoredName"].stringValue
         trackCensoredName = json["trackCensoredName"].stringValue
-        artistViewUrl = json["artistViewUrl"].stringValue
+        collectionArtistId = json["collectionArtistId"].stringValue
+        collectionArtistViewUrl = json["collectionArtistViewUrl"].stringValue
         collectionViewUrl = json["collectionViewUrl"].stringValue
         trackViewUrl = json["trackViewUrl"].stringValue
         previewUrl = json["previewUrl"].stringValue
+        artworkUrl30 = json["artworkUrl30"].stringValue
         artworkUrl60 = json["artworkUrl60"].stringValue
         artworkUrl100 = json["artworkUrl100"].stringValue
         collectionPrice = json["collectionPrice"].stringValue
         trackPrice = json["trackPrice"].stringValue
+        trackRentalPrice = json["trackRentalPrice"].stringValue
+        collectionHdPrice = json["collectionHdPrice"].stringValue
+        trackHdPrice = json["trackHdPrice"].stringValue
+        trackHdRentalPrice = json["trackHdRentalPrice"].stringValue
+        releaseDate = json["releaseDate"].stringValue
         collectionExplicitness = json["collectionExplicitness"].stringValue
         trackExplicitness = json["trackExplicitness"].stringValue
         discCount = json["discCount"].stringValue
@@ -69,6 +83,8 @@ struct Movie {
         country = json["country"].stringValue
         currency = json["currency"].stringValue
         primaryGenreName = json["primaryGenreName"].stringValue
+        contentAdvisoryRating = json["contentAdvisoryRating"].stringValue
+        hasITunesExtras = json["hasITunesExtras"].stringValue
     }
 }
 
