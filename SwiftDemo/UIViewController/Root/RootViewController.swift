@@ -50,9 +50,10 @@ class RootViewController: UIViewController {
                                  action: #selector(didSelectSegment),
                                  for: .valueChanged)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
     }
 
     func didSelectSegment() {

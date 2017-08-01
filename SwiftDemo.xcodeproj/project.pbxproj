@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041A27101F2C34F500EF4C85 /* SearchiTunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */; };
+		041A27141F2C3AFE00EF4C85 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27131F2C3AFE00EF4C85 /* Music.swift */; };
+		041A27161F2C3B0C00EF4C85 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27151F2C3B0C00EF4C85 /* Movie.swift */; };
+		041A27181F2C3B1800EF4C85 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27171F2C3B1800EF4C85 /* TVShow.swift */; };
+		041A271A1F2C3B2400EF4C85 /* Ebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A27191F2C3B2400EF4C85 /* Ebook.swift */; };
 		073874C4C897DBA9222AEC27 /* Pods_SwiftDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F3459CB6E5B0A468B75445 /* Pods_SwiftDemoTests.framework */; };
 		4DD89FF8E53FE1937AEB7252 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CCE07BC6F89C7805666021 /* Pods_SwiftDemo.framework */; };
 		63091C1FA0C17E2EF3DCBE3B /* Pods_SwiftDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF36E2E465DE8C6B134F66C /* Pods_SwiftDemoUITests.framework */; };
+		77236E921F2FB7F3000F2604 /* movie-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E911F2FB7F3000F2604 /* movie-200.json */; };
+		77236E941F2FB858000F2604 /* music-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E931F2FB858000F2604 /* music-200.json */; };
+		77236E961F2FB8E1000F2604 /* ebook-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E951F2FB8E1000F2604 /* ebook-200.json */; };
+		77236E981F2FB992000F2604 /* tvshow-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E971F2FB992000F2604 /* tvshow-200.json */; };
+		77236E991F2FBB40000F2604 /* music-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E931F2FB858000F2604 /* music-200.json */; };
+		77236E9A1F2FBB42000F2604 /* movie-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E911F2FB7F3000F2604 /* movie-200.json */; };
+		77236E9B1F2FBB44000F2604 /* ebook-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E951F2FB8E1000F2604 /* ebook-200.json */; };
+		77236E9C1F2FBB47000F2604 /* tvshow-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 77236E971F2FB992000F2604 /* tvshow-200.json */; };
+		77236E9E1F2FBE11000F2604 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77236E9D1F2FBE11000F2604 /* SessionManager.swift */; };
 		779570EF1F2713E800A0AC23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779570EE1F2713E800A0AC23 /* AppDelegate.swift */; };
 		779570F41F2713E800A0AC23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779570F21F2713E800A0AC23 /* Main.storyboard */; };
 		779570F71F2713E800A0AC23 /* SwiftDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */; };
@@ -39,12 +53,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchiTunesModel.swift; sourceTree = "<group>"; };
+		041A27131F2C3AFE00EF4C85 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		041A27151F2C3B0C00EF4C85 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		041A27171F2C3B1800EF4C85 /* TVShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		041A27191F2C3B2400EF4C85 /* Ebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ebook.swift; sourceTree = "<group>"; };
 		0EF36E2E465DE8C6B134F66C /* Pods_SwiftDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A48C779D9DAC4CA7463C11 /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		26CCE07BC6F89C7805666021 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D5F6C7E28D339891925531 /* Pods-SwiftDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemoTests/Pods-SwiftDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		61F3459CB6E5B0A468B75445 /* Pods_SwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71195B7F98355A16B4FA374C /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		77236E911F2FB7F3000F2604 /* movie-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "movie-200.json"; sourceTree = "<group>"; };
+		77236E931F2FB858000F2604 /* music-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "music-200.json"; sourceTree = "<group>"; };
+		77236E951F2FB8E1000F2604 /* ebook-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ebook-200.json"; sourceTree = "<group>"; };
+		77236E971F2FB992000F2604 /* tvshow-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tvshow-200.json"; sourceTree = "<group>"; };
+		77236E9D1F2FBE11000F2604 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		779570EB1F2713E800A0AC23 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		779570EE1F2713E800A0AC23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		779570F31F2713E800A0AC23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +117,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77236E861F2BA03C000F2604 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				779570FD1F2713E800A0AC23 /* Info.plist */,
+				779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */,
+				779570F81F2713E800A0AC23 /* Assets.xcassets */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		77236E891F2BA773000F2604 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				77236E9D1F2FBE11000F2604 /* SessionManager.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		77236E8A1F2BA8E6000F2604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */,
+				041A27131F2C3AFE00EF4C85 /* Music.swift */,
+				041A27151F2C3B0C00EF4C85 /* Movie.swift */,
+				041A27171F2C3B1800EF4C85 /* TVShow.swift */,
+				041A27191F2C3B2400EF4C85 /* Ebook.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77236E901F2FB145000F2604 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				77236E911F2FB7F3000F2604 /* movie-200.json */,
+				77236E931F2FB858000F2604 /* music-200.json */,
+				77236E951F2FB8E1000F2604 /* ebook-200.json */,
+				77236E971F2FB992000F2604 /* tvshow-200.json */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		779570E21F2713E800A0AC23 = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +183,12 @@
 		779570ED1F2713E800A0AC23 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				779570FD1F2713E800A0AC23 /* Info.plist */,
 				779570EE1F2713E800A0AC23 /* AppDelegate.swift */,
-				779570F81F2713E800A0AC23 /* Assets.xcassets */,
 				779571241F278AB600A0AC23 /* Define */,
+				77236E891F2BA773000F2604 /* Extension */,
+				77236E8A1F2BA8E6000F2604 /* Model */,
+				77236E861F2BA03C000F2604 /* Resource */,
 				7795711F1F27885700A0AC23 /* Storyboard */,
-				779570F51F2713E800A0AC23 /* SwiftDemo.xcdatamodeld */,
 				779571201F27886900A0AC23 /* UIViewController */,
 			);
 			path = SwiftDemo;
@@ -132,6 +197,7 @@
 		779571051F2713E800A0AC23 /* SwiftDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				77236E901F2FB145000F2604 /* Stub */,
 				779571061F2713E800A0AC23 /* SwiftDemoTests.swift */,
 				779571081F2713E800A0AC23 /* Info.plist */,
 			);
@@ -280,8 +346,7 @@
 				TargetAttributes = {
 					779570EA1F2713E800A0AC23 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = X5VREU473V;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					779571011F2713E800A0AC23 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -323,7 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				779570FC1F2713E800A0AC23 /* LaunchScreen.storyboard in Resources */,
+				77236E9B1F2FBB44000F2604 /* ebook-200.json in Resources */,
+				77236E9A1F2FBB42000F2604 /* movie-200.json in Resources */,
 				779570F91F2713E800A0AC23 /* Assets.xcassets in Resources */,
+				77236E991F2FBB40000F2604 /* music-200.json in Resources */,
+				77236E9C1F2FBB47000F2604 /* tvshow-200.json in Resources */,
 				779570F41F2713E800A0AC23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +401,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77236E941F2FB858000F2604 /* music-200.json in Resources */,
+				77236E981F2FB992000F2604 /* tvshow-200.json in Resources */,
+				77236E961F2FB8E1000F2604 /* ebook-200.json in Resources */,
+				77236E921F2FB7F3000F2604 /* movie-200.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,9 +561,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				779571231F27886900A0AC23 /* RootViewController.swift in Sources */,
+				041A27101F2C34F500EF4C85 /* SearchiTunesModel.swift in Sources */,
+				041A27161F2C3B0C00EF4C85 /* Movie.swift in Sources */,
+				041A27141F2C3AFE00EF4C85 /* Music.swift in Sources */,
+				041A27181F2C3B1800EF4C85 /* TVShow.swift in Sources */,
 				779570F71F2713E800A0AC23 /* SwiftDemo.xcdatamodeld in Sources */,
+				041A271A1F2C3B2400EF4C85 /* Ebook.swift in Sources */,
 				779571261F278AC200A0AC23 /* Define.swift in Sources */,
 				779570EF1F2713E800A0AC23 /* AppDelegate.swift in Sources */,
+				77236E9E1F2FBE11000F2604 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,7 +665,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -631,7 +710,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -645,7 +724,7 @@
 			baseConfigurationReference = 17A48C779D9DAC4CA7463C11 /* Pods-SwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X5VREU473V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.picomax.SwiftDemo;
@@ -659,7 +738,7 @@
 			baseConfigurationReference = 71195B7F98355A16B4FA374C /* Pods-SwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X5VREU473V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.picomax.SwiftDemo;
@@ -672,7 +751,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52D5F6C7E28D339891925531 /* Pods-SwiftDemoTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = X5VREU473V;
 				INFOPLIST_FILE = SwiftDemoTests/Info.plist;
@@ -688,7 +767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 899499217A477B57AED4589C /* Pods-SwiftDemoTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = X5VREU473V;
 				INFOPLIST_FILE = SwiftDemoTests/Info.plist;
@@ -704,7 +783,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E87639603FFBAE48DA4E65DB /* Pods-SwiftDemoUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = X5VREU473V;
 				INFOPLIST_FILE = SwiftDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -719,7 +798,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BE918B2B0AAEBE5BFFEB7E66 /* Pods-SwiftDemoUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = X5VREU473V;
 				INFOPLIST_FILE = SwiftDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
