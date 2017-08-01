@@ -1,5 +1,5 @@
 //
-//  eBookModel.swift
+//  TVShow.swift
 //  SwiftDemo
 //
 //  Created by picomax on 2017. 7. 28..
@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-struct eBookModel {
+struct TVShow {
     let wrapperType: String
     let kind: String
     let artistId: String
@@ -72,7 +72,7 @@ struct eBookModel {
     }
 }
 
-extension eBookModel {
+extension TVShow {
     @discardableResult
     static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
         let router = SDRouter.music(term: term)
@@ -89,5 +89,4 @@ extension eBookModel {
         })
     }
 }
-
 

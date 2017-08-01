@@ -1,5 +1,5 @@
 //
-//  MovieModel.swift
+//  Ebook.swift
 //  SwiftDemo
 //
 //  Created by picomax on 2017. 7. 28..
@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 import Alamofire
 
-struct MovieModel {
+struct Ebook {
     let wrapperType: String
     let kind: String
     let artistId: String
@@ -72,7 +72,7 @@ struct MovieModel {
     }
 }
 
-extension MovieModel {
+extension Ebook {
     @discardableResult
     static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
         let router = SDRouter.music(term: term)
