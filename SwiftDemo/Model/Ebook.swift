@@ -63,8 +63,8 @@ struct Ebook {
 
 extension Ebook {
     @discardableResult
-    static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
-        let router = SDRouter.music(term: term)
+    static func requestEbook(term: String, callback: @escaping (_ error: NSError?, _ ebooks: [Ebook]?) -> Void) -> URLSessionTask? {
+        let router = SDRouter.ebook(term: term)
         return SessionManager.shared.requestSearch(router: router, callback: { (response) in
             switch response.result {
             case .failure(let error):
@@ -72,8 +72,15 @@ extension Ebook {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                var result: [Ebook] = []
+                for object in array {
+                    let m = Ebook(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }

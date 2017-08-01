@@ -34,7 +34,70 @@ class SwiftDemoTests: XCTestCase {
         
         let arrived = self.expectation(description: #function)
         
-        MusicModel.requestMusic(term: "someone") { (error, musics) in
+        Music.requestMusic(term: "someone") { (error, musics) in
+            //do test
+            
+            arrived.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: timeout) { error in
+            XCTAssertNil(error, "timeout")
+        }
+    }
+    
+    func testMovie() {
+        stub(condition: { (req) -> Bool in
+            return true
+        }) { (req) -> OHHTTPStubsResponse in
+            let path = Bundle.main.path(forResource: "movie-200", ofType: "json")!
+            return fixture(filePath: path, status: 200, headers: [:])
+        }
+        
+        let arrived = self.expectation(description: #function)
+        
+        Movie.requestMovie(term: "someone") { (error, movies) in
+            //do test
+            
+            arrived.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: timeout) { error in
+            XCTAssertNil(error, "timeout")
+        }
+    }
+    
+    func testEbook() {
+        stub(condition: { (req) -> Bool in
+            return true
+        }) { (req) -> OHHTTPStubsResponse in
+            let path = Bundle.main.path(forResource: "ebook-200", ofType: "json")!
+            return fixture(filePath: path, status: 200, headers: [:])
+        }
+        
+        let arrived = self.expectation(description: #function)
+        
+        Ebook.requestEbook(term: "someone") { (error, ebooks) in
+            //do test
+            
+            arrived.fulfill()
+        }
+        
+        self.waitForExpectations(timeout: timeout) { error in
+            XCTAssertNil(error, "timeout")
+        }
+    }
+    
+    func testTVShow() {
+        stub(condition: { (req) -> Bool in
+            return true
+        }) { (req) -> OHHTTPStubsResponse in
+            let path = Bundle.main.path(forResource: "tvshow-200", ofType: "json")!
+            return fixture(filePath: path, status: 200, headers: [:])
+        }
+        
+        let arrived = self.expectation(description: #function)
+        
+        TVShow.requestTVShow(term: "someone") { (error, tvshows) in
             //do test
             
             arrived.fulfill()

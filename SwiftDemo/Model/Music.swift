@@ -89,8 +89,17 @@ extension Music {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                //let m = Music.init(json: json)
+                //let m = (array?.filter({ $0.string != nil }).map({ $0.string! }))!
+                var result: [Music] = []
+                for object in array {
+                    let m = Music(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }

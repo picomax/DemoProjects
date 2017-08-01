@@ -90,8 +90,8 @@ struct Movie {
 
 extension Movie {
     @discardableResult
-    static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
-        let router = SDRouter.music(term: term)
+    static func requestMovie(term: String, callback: @escaping (_ error: NSError?, _ movies: [Movie]?) -> Void) -> URLSessionTask? {
+        let router = SDRouter.movie(term: term)
         return SessionManager.shared.requestSearch(router: router, callback: { (response) in
             switch response.result {
             case .failure(let error):
@@ -99,8 +99,15 @@ extension Movie {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                var result: [Movie] = []
+                for object in array {
+                    let m = Movie(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }

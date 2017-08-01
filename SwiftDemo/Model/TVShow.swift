@@ -62,8 +62,8 @@ struct TVShow {
 
 extension TVShow {
     @discardableResult
-    static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
-        let router = SDRouter.music(term: term)
+    static func requestTVShow(term: String, callback: @escaping (_ error: NSError?, _ tvshows: [TVShow]?) -> Void) -> URLSessionTask? {
+        let router = SDRouter.tvshow(term: term)
         return SessionManager.shared.requestSearch(router: router, callback: { (response) in
             switch response.result {
             case .failure(let error):
@@ -71,8 +71,15 @@ extension TVShow {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                var result: [TVShow] = []
+                for object in array {
+                    let m = TVShow(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }
