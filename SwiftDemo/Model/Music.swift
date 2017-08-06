@@ -25,10 +25,12 @@ struct Music {
     let collectionViewUrl: String
     let trackViewUrl: String
     let previewUrl: String
+    let artworkUrl30: String
     let artworkUrl60: String
     let artworkUrl100: String
     let collectionPrice: String
     let trackPrice: String
+    let releaseDate: String
     let collectionExplicitness: String
     let trackExplicitness: String
     let discCount: String
@@ -39,6 +41,7 @@ struct Music {
     let country: String
     let currency: String
     let primaryGenreName: String
+    let isStreamable: String
     
     init(json: JSON) {
         wrapperType = json["wrapperType"].stringValue
@@ -55,10 +58,12 @@ struct Music {
         collectionViewUrl = json["collectionViewUrl"].stringValue
         trackViewUrl = json["trackViewUrl"].stringValue
         previewUrl = json["previewUrl"].stringValue
+        artworkUrl30 = json["artworkUrl30"].stringValue
         artworkUrl60 = json["artworkUrl60"].stringValue
         artworkUrl100 = json["artworkUrl100"].stringValue
         collectionPrice = json["collectionPrice"].stringValue
         trackPrice = json["trackPrice"].stringValue
+        releaseDate = json["releaseDate"].stringValue
         collectionExplicitness = json["collectionExplicitness"].stringValue
         trackExplicitness = json["trackExplicitness"].stringValue
         discCount = json["discCount"].stringValue
@@ -69,6 +74,7 @@ struct Music {
         country = json["country"].stringValue
         currency = json["currency"].stringValue
         primaryGenreName = json["primaryGenreName"].stringValue
+        isStreamable = json["isStreamable"].stringValue
     }
 }
 
@@ -83,8 +89,17 @@ extension Music {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                //let m = Music.init(json: json)
+                //let m = (array?.filter({ $0.string != nil }).map({ $0.string! }))!
+                var result: [Music] = []
+                for object in array {
+                    let m = Music(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }

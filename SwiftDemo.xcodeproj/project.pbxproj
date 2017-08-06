@@ -139,10 +139,10 @@
 			isa = PBXGroup;
 			children = (
 				041A270F1F2C34F500EF4C85 /* SearchiTunesModel.swift */,
-				041A27131F2C3AFE00EF4C85 /* Music.swift */,
 				041A27151F2C3B0C00EF4C85 /* Movie.swift */,
-				041A27171F2C3B1800EF4C85 /* TVShow.swift */,
+				041A27131F2C3AFE00EF4C85 /* Music.swift */,
 				041A27191F2C3B2400EF4C85 /* Ebook.swift */,
+				041A27171F2C3B1800EF4C85 /* TVShow.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

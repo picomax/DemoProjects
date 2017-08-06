@@ -11,71 +11,60 @@ import SwiftyJSON
 import Alamofire
 
 struct Ebook {
-    let wrapperType: String
-    let kind: String
-    let artistId: String
-    let collectionId: String
-    let trackId: String
-    let artistName: String
-    let collectionName: String
-    let trackName: String
-    let collectionCensoredName: String
     let trackCensoredName: String
     let artistViewUrl: String
-    let collectionViewUrl: String
     let trackViewUrl: String
-    let previewUrl: String
     let artworkUrl60: String
     let artworkUrl100: String
-    let collectionPrice: String
-    let trackPrice: String
-    let collectionExplicitness: String
-    let trackExplicitness: String
-    let discCount: String
-    let discNumber: String
-    let trackCount: String
-    let trackNumber: String
-    let trackTimeMillis: String
-    let country: String
+    let fileSizeBytes: String
     let currency: String
-    let primaryGenreName: String
+    let artistId: String
+    let artistName: String
+    let genres: [String]
+    let kind: String
+    let price: String
+    let description: String
+    let trackId: String
+    let trackName: String
+    let releaseDate: String
+    let formattedPrice: String
+    let artistIds: [String]
+    let genreIds: [String]
+    let averageUserRating: String
+    let userRatingCount: String
     
     init(json: JSON) {
-        wrapperType = json["wrapperType"].stringValue
-        kind = json["kind"].stringValue
-        artistId = json["artistId"].stringValue
-        collectionId = json["collectionId"].stringValue
-        trackId = json["trackId"].stringValue
-        artistName = json["artistName"].stringValue
-        collectionName = json["collectionName"].stringValue
-        trackName = json["trackName"].stringValue
-        collectionCensoredName = json["collectionCensoredName"].stringValue
         trackCensoredName = json["trackCensoredName"].stringValue
         artistViewUrl = json["artistViewUrl"].stringValue
-        collectionViewUrl = json["collectionViewUrl"].stringValue
         trackViewUrl = json["trackViewUrl"].stringValue
-        previewUrl = json["previewUrl"].stringValue
         artworkUrl60 = json["artworkUrl60"].stringValue
         artworkUrl100 = json["artworkUrl100"].stringValue
-        collectionPrice = json["collectionPrice"].stringValue
-        trackPrice = json["trackPrice"].stringValue
-        collectionExplicitness = json["collectionExplicitness"].stringValue
-        trackExplicitness = json["trackExplicitness"].stringValue
-        discCount = json["discCount"].stringValue
-        discNumber = json["discNumber"].stringValue
-        trackCount = json["trackCount"].stringValue
-        trackNumber = json["trackNumber"].stringValue
-        trackTimeMillis = json["trackTimeMillis"].stringValue
-        country = json["country"].stringValue
+        fileSizeBytes = json["fileSizeBytes"].stringValue
         currency = json["currency"].stringValue
-        primaryGenreName = json["primaryGenreName"].stringValue
+        artistId = json["artistId"].stringValue
+        artistName = json["artistName"].stringValue
+        //genres = json["genres"].arrayValue
+        genres = (json["genres"].array?.filter({ $0.string != nil }).map({ $0.string! }))!
+        kind = json["kind"].stringValue
+        price = json["price"].stringValue
+        description = json["description"].stringValue
+        trackId = json["trackId"].stringValue
+        trackName = json["trackName"].stringValue
+        releaseDate = json["releaseDate"].stringValue
+        formattedPrice = json["formattedPrice"].stringValue
+        //artistIds = json["artistIds"].arrayValue
+        artistIds = (json["artistIds"].array?.filter({ $0.string != nil }).map({ $0.string! }))!
+        //genreIds = json["genreIds"].arrayValue
+        genreIds = (json["genreIds"].array?.filter({ $0.string != nil }).map({ $0.string! }))!
+        averageUserRating = json["averageUserRating"].stringValue
+        userRatingCount = json["userRatingCount"].stringValue
     }
 }
 
 extension Ebook {
     @discardableResult
-    static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
-        let router = SDRouter.music(term: term)
+    static func requestEbook(term: String, callback: @escaping (_ error: NSError?, _ ebooks: [Ebook]?) -> Void) -> URLSessionTask? {
+        let router = SDRouter.ebook(term: term)
         return SessionManager.shared.requestSearch(router: router, callback: { (response) in
             switch response.result {
             case .failure(let error):
@@ -83,8 +72,15 @@ extension Ebook {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                var result: [Ebook] = []
+                for object in array {
+                    let m = Ebook(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }

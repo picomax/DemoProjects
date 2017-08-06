@@ -12,70 +12,58 @@ import Alamofire
 
 struct TVShow {
     let wrapperType: String
-    let kind: String
+    let collectionType: String
     let artistId: String
     let collectionId: String
-    let trackId: String
     let artistName: String
     let collectionName: String
-    let trackName: String
     let collectionCensoredName: String
-    let trackCensoredName: String
     let artistViewUrl: String
     let collectionViewUrl: String
-    let trackViewUrl: String
-    let previewUrl: String
     let artworkUrl60: String
     let artworkUrl100: String
     let collectionPrice: String
-    let trackPrice: String
+    let collectionHdPrice: String
     let collectionExplicitness: String
-    let trackExplicitness: String
-    let discCount: String
-    let discNumber: String
+    let contentAdvisoryRating: String
     let trackCount: String
-    let trackNumber: String
-    let trackTimeMillis: String
+    let copyright: String
     let country: String
     let currency: String
+    let releaseDate: String
     let primaryGenreName: String
+    let longDescription: String
     
     init(json: JSON) {
         wrapperType = json["wrapperType"].stringValue
-        kind = json["kind"].stringValue
+        collectionType = json["collectionType"].stringValue
         artistId = json["artistId"].stringValue
         collectionId = json["collectionId"].stringValue
-        trackId = json["trackId"].stringValue
         artistName = json["artistName"].stringValue
         collectionName = json["collectionName"].stringValue
-        trackName = json["trackName"].stringValue
         collectionCensoredName = json["collectionCensoredName"].stringValue
-        trackCensoredName = json["trackCensoredName"].stringValue
         artistViewUrl = json["artistViewUrl"].stringValue
         collectionViewUrl = json["collectionViewUrl"].stringValue
-        trackViewUrl = json["trackViewUrl"].stringValue
-        previewUrl = json["previewUrl"].stringValue
         artworkUrl60 = json["artworkUrl60"].stringValue
         artworkUrl100 = json["artworkUrl100"].stringValue
         collectionPrice = json["collectionPrice"].stringValue
-        trackPrice = json["trackPrice"].stringValue
+        collectionHdPrice = json["collectionHdPrice"].stringValue
         collectionExplicitness = json["collectionExplicitness"].stringValue
-        trackExplicitness = json["trackExplicitness"].stringValue
-        discCount = json["discCount"].stringValue
-        discNumber = json["discNumber"].stringValue
+        contentAdvisoryRating = json["contentAdvisoryRating"].stringValue
         trackCount = json["trackCount"].stringValue
-        trackNumber = json["trackNumber"].stringValue
-        trackTimeMillis = json["trackTimeMillis"].stringValue
+        copyright = json["copyright"].stringValue
         country = json["country"].stringValue
         currency = json["currency"].stringValue
+        releaseDate = json["releaseDate"].stringValue
         primaryGenreName = json["primaryGenreName"].stringValue
+        longDescription = json["longDescription"].stringValue
     }
 }
 
 extension TVShow {
     @discardableResult
-    static func requestMusic(term: String, callback: @escaping (_ error: NSError?, _ muscis: [Music]?) -> Void) -> URLSessionTask? {
-        let router = SDRouter.music(term: term)
+    static func requestTVShow(term: String, callback: @escaping (_ error: NSError?, _ tvshows: [TVShow]?) -> Void) -> URLSessionTask? {
+        let router = SDRouter.tvshow(term: term)
         return SessionManager.shared.requestSearch(router: router, callback: { (response) in
             switch response.result {
             case .failure(let error):
@@ -83,8 +71,15 @@ extension TVShow {
                 callback(error as NSError, nil)
             case .success(let value):
                 let json = JSON(value)
-                let m = Music(json: json)
-                callback(nil, [m])
+                //resultCount
+                //results
+                let array = json["results"].arrayValue
+                var result: [TVShow] = []
+                for object in array {
+                    let m = TVShow(json: object)
+                    result.append(m)
+                }
+                callback(nil, result)
             }
         })
     }
